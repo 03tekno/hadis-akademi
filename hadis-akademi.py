@@ -48,7 +48,6 @@ class AkademikHadisApp(QMainWindow):
         self.init_ui()
         self.tema_uygula(self.aktif_tema)
         
-        # İlk açılışta ilk hadisi yükleyen mantık
         if self.fasillar:
             self.fasil_list.setCurrentRow(0)
             self.konu_yukle(self.fasil_list.currentItem())
@@ -113,11 +112,13 @@ class AkademikHadisApp(QMainWindow):
         self.splitter.setStyleSheet("QSplitter::handle { background-color: rgba(0,0,0,0.1); }")
         
         self.fasil_list = QListWidget()
+        self.fasil_list.setWordWrap(True) # Metin kaydırma özelliği
         self.fasil_list.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.fasil_list.addItems(self.fasillar)
         self.fasil_list.itemClicked.connect(self.konu_yukle)
         
         self.konu_list = QListWidget()
+        self.konu_list.setWordWrap(True) # Metin kaydırma özelliği
         self.konu_list.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.konu_list.itemClicked.connect(self.hadis_yukle)
         
@@ -145,8 +146,18 @@ class AkademikHadisApp(QMainWindow):
         self.setStyleSheet(f"""
             QMainWindow, QWidget {{ background-color: {t['bg']}; color: {t['txt']}; }}
             #panelBaslik {{ color: {t['vrg']}; font-weight: bold; background: {t['pnl']}; padding: 5px; }}
-            QListWidget {{ background-color: {t['kart']}; border: 1px solid {t['pnl']}; color: {t['txt']}; outline: none; }}
-            QListWidget::item {{ padding: 8px; border-bottom: 1px solid {t['bg']}; }}
+            QListWidget {{ 
+                background-color: {t['kart']}; 
+                border: 1px solid {t['pnl']}; 
+                color: {t['txt']}; 
+                outline: none; 
+                font-size: 16px; 
+                font-weight: bold; 
+            }}
+            QListWidget::item {{ 
+                padding: 10px; 
+                border-bottom: 1px solid {t['bg']};
+            }}
             QListWidget::item:selected {{ background-color: {t['vrg']}; color: white; }}
             QLineEdit, QComboBox {{ background: {t['kart']}; color: {t['txt']}; border: 1px solid {t['pnl']}; padding: 5px; }}
             QPushButton {{ background-color: {t['vrg']}; color: white; padding: 5px 15px; border-radius: 3px; font-weight: bold; }}

@@ -310,7 +310,7 @@ if __name__ == "__main__":
     
     if os.name == 'nt':
         import ctypes
-        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("akademik.hadis.kutuphanesi.v11")
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("akademik.hadis.kutuphanesi.v1.0")
         
     ex = AkademikHadisApp()
     ex.show()

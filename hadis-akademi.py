@@ -203,7 +203,7 @@ class AkademikHadisApp(QMainWindow):
             <div class="hadis-kart">
                 <div class="hadis-header">
                     <table width="100%"><tr>
-                        <td align="left"><span class="hadis-no">HADİS: {h_id}</span></td>
+                        <td align="right"><span class="hadis-no">HADİS NO: {h_id}</span></td>
                         <td align="right"><a href="copy:{h_id}" class="kopyala-btn">📋 KOPYALA</a></td>
                     </tr></table>
                 </div>

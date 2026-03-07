@@ -25,6 +25,10 @@ class AkademikHadisApp(QMainWindow):
         self.fasillar = []
 
         self.temalar = {
+            "Huzur Yeşili": {"bg": "#e8f5e9", "kart": "#ffffff", "txt": "#1b5e20", "vrg": "#4caf50", "pnl": "#c8e6c9", "serh": "#f1f8e9"},
+            "Kitap": {"bg": "#f4ecd8", "kart": "#fdfaf0", "txt": "#5d4037", "vrg": "#a1887f", "pnl": "#e6dcc0", "serh": "#f9f5e8"},
+            "Gece": {"bg": "#0f172a", "kart": "#1e293b", "txt": "#f1f5f9", "vrg": "#38bdf8", "pnl": "#334155", "serh": "#273548"},
+            "Çöl": {"bg": "#d7ccc8", "kart": "#efebe9", "txt": "#3e2723", "vrg": "#bf360c", "pnl": "#d0c0b8", "serh": "#f5f0ed"},
             "Klasik Fildişi": {"bg": "#f5f5f0", "kart": "#ffffff", "txt": "#1a1a1a", "vrg": "#2d5a4c", "pnl": "#e7e5d1", "serh": "#fcfaf5"},
             "Modern Koyu": {"bg": "#121212", "kart": "#1e1e1e", "txt": "#e0e0e0", "vrg": "#bb86fc", "pnl": "#2c2c2c", "serh": "#252525"},
             "Orman (Forest)": {"bg": "#1a2421", "kart": "#2d3a35", "txt": "#e8f5e9", "vrg": "#81c784", "pnl": "#3e4d48", "serh": "#34423d"},
@@ -34,14 +38,8 @@ class AkademikHadisApp(QMainWindow):
             "Kömür (Charcoal)": {"bg": "#212121", "kart": "#333333", "txt": "#f5f5f5", "vrg": "#ff5252", "pnl": "#424242", "serh": "#3a3a3a"},
             "Toprak & Gül": {"bg": "#dfd3c3", "kart": "#f8ede3", "txt": "#7d5a50", "vrg": "#8d4925", "pnl": "#d0b8a8", "serh": "#f2e8da"},
             "Okyanus": {"bg": "#e0f2f1", "kart": "#ffffff", "txt": "#004d40", "vrg": "#00acc1", "pnl": "#b2dfdb", "serh": "#f4fffe"},
-            "Nordic Frost": {"bg": "#eceff4", "kart": "#ffffff", "txt": "#2e3440", "vrg": "#88c0d0", "pnl": "#d8dee9", "serh": "#f0f4f8"},
             "Şafak Vakti": {"bg": "#23074d", "kart": "#4b1248", "txt": "#ffffff", "vrg": "#ff512f", "pnl": "#320b3c", "serh": "#5a1854"},
-            "Bambu": {"bg": "#f1f8e9", "kart": "#ffffff", "txt": "#33691e", "vrg": "#7cb342", "pnl": "#dcedc8", "serh": "#f9fbe7"},
-            "Eski Kitap": {"bg": "#d4c4a8", "kart": "#e6d5b8", "txt": "#3e2723", "vrg": "#5d4037", "pnl": "#c3b091", "serh": "#efe0ca"},
-            "Uzay Gri": {"bg": "#2c3e50", "kart": "#34495e", "txt": "#ecf0f1", "vrg": "#3498db", "pnl": "#1a252f", "serh": "#3d566e"},
-            "Petrol": {"bg": "#071e22", "kart": "#052f32", "txt": "#80ced7", "vrg": "#00a896", "pnl": "#021114", "serh": "#083d41"},
             "Kardelen": {"bg": "#f8f9fa", "kart": "#ffffff", "txt": "#343a40", "vrg": "#007bff", "pnl": "#e9ecef", "serh": "#f1f3f5"},
-            "Zeytin Dalı": {"bg": "#556b2f", "kart": "#6b8e23", "txt": "#ffffff", "vrg": "#f5f5dc", "pnl": "#4b5d26", "serh": "#7a9e31"}
         }
         
         self.verileri_yukle()
